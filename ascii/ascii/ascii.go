@@ -8,6 +8,8 @@ const Ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 	`@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_` +
 	"`abcdefghijklmnopqrstuvwxyz{|}~\x7f"
 
+const a = "\x22\x48\x65\x6C\x6C\x6F\x20\x3A\x2D\x29\x22"
+
 // Funksjon tar en streng med kun ASCII tegn og lager en utskrift på
 // følgende format:
 // [ascii-kode heksadesimalt med store bokstaver A-F][mellomrom]
@@ -33,18 +35,8 @@ func IterateOverASCIIStringLiteral(sl string) {
 // Funksjonen greetingASCII() returnerer en variabel av typen string,
 // som inneholder kun ASCII tegn (ikke utvidet ASCII).
 // Gjelder oppgave 1b
-/*func GreetingASCII() {
-	const s = "48656C6C6F203B2D29"
-	decoded, err := hex.DecodeString(s)
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Printf("%s\n", decoded)
-}
-*/
 
-func GreetingASCII2() {
-	a := "\x22\x48\x65\x6C\x6C\x6F\x20\x3A\x2D\x29\x22"
+func GreetingASCII() {
 	for i := 0; i < len(a); i++ {
 		fmt.Printf("%c", a[i])
 	}
